@@ -1,5 +1,10 @@
 import tkinter as tk
+import matplotlib
+matplotlib.use('TkAgg')
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
+import crime_data as data
 from tkinter import messagebox
+from matplotlib.figure import Figure
 
 # Initialize the main window
 root = tk.Tk()
@@ -66,7 +71,24 @@ def show_home():
     view_map_button = tk.Button(root, text="View Map Details", command=show_crime_map)
     view_map_button.pack(pady=10)
 
+    view_graph_button = tk.Button(root, text="View Graph", command=show_graph)
+    view_graph_button.pack(pady=10)
+
 # Function to show the Crime Map Detail screen
+def show_graph():
+    popup = tk.Toplevel()
+    popup.title("Crime Graph")
+
+    # Create a figure and axes
+    fig = Figure(figsize=(5, 4), dpi=100)
+
+    data.df.plot(kind="bar", x="key", y="value")
+
+    # Create a canvas to embed the figure in the popup window
+    canvas = FigureCanvasTkAgg(fig, master=popup)
+    canvas.draw()
+    canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
+
 def show_crime_map():
     clear_frame()
     crime_map_label = tk.Label(root, text="Crime Map Detail", font=("Arial", 18))
