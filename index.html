@@ -17,13 +17,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    
   </head>
+  
   <body>
     <script src="app.js"></script>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
       <a class="navbar-brand" href="index.html">
-        <!-- Location Icon before the text -->
         <i class="fas fa-map-marker-alt"></i> Crime Tracker
       </a>
       <button
@@ -38,26 +40,50 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link" href="crimeMap.html">Crime Map</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="graph.html">Graphs</a>
+            <a class="nav-link" href="graph.html">Crime Graph</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign Up</a>
           </li>
         </ul>
       </div>
     </nav>
+    
 
-    <h1 class="text-center">Crime Tracker</h1>
-    <p class="text-center">
-      Not sure what should go on the home page maybe some kind of carousel of
-      screenshots taken from the crime map just kind of showing off the product
-    </p>
-
-    <!--Home Page Image Placeholder-->
-    <div class=""container mt-4 text-center">
-      <img src="Images/U.S. Crime Heat Map Placeholder.jpg" alt="U.S. Crime Heat Map" class="img-fluid" />
+    <!-- Sub-Header Section -->
+    <div class="sub-header text-center">
+      <h1>Crime Tracker</h1>
+      <p>Your trusted companion in understanding crime trends and safety!</p>
+      <a href="signup.html" class="btn btn-primary">Sign Up Today!</a>
     </div>
+
+    <!-- Main Content -->
+    <div class="container mt-4 text-center">
+      <img
+        src="Images/U.S. Crime Heat Map Placeholder.jpg"
+        alt="U.S. Crime Heat Map"
+        class="img-fluid"
+      />
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2024 Crime Tracker. All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </footer>    
   </body>
 </html>
