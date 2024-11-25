@@ -1,3 +1,94 @@
+/* General Body Styling */
 body {
-  padding: 4px;
+  font-family: Arial, sans-serif;
+  background-color: #F4F4F4; /* Light Gray */
+  color: #2C2C2C; /* Dark Gray text */
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styling */
+.custom-navbar {
+  background-color: #6A0013;
+  padding: 1rem;
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.custom-navbar .navbar-brand:hover,
+.custom-navbar .nav-link:hover {
+  color: #171717;
+  text-decoration: none;
+}
+
+.custom-navbar .nav-link {
+  margin-left: 1rem;
+}
+
+/* Sub-Header Styling */
+.sub-header {
+  background-color: #F4F4F4;
+  padding: 30px 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+.sub-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.sub-header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.sub-header .btn-primary {
+  background-color: #6A0013;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+}
+
+.sub-header .btn-primary:hover {
+  background-color: #171717;
+}
+
+/* Footer Social Icons Styling */
+.footer {
+  background-color: #6A0013;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.social-icons {
+  display: inline-flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  font-size: 1.8rem;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #270007;
+}
+
+
+
+/* Navbar Styling */
+.custom-navbar .navbar-brand {
+  padding-left: 10px;
+  padding-right: 10;
 }
