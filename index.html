@@ -92,21 +92,37 @@
       <input
         type="text"
         id="searchInput"
+        id="search-feedback"
         class="search-bar"
         placeholder="Search for a location..."
       />
       <button class="search-btn" onclick="performSearch()">Search</button>
       <div id="searchResults" class="search-results"></div>
+      <p id="search-feedback" class="text-muted mt-2">Start typing to search for a location.</p>
     </div>
 
     <!-- Main Content -->
-    <div class="container mt-4 text-center">
+    <div class="heatamp-container">
       <img
         src="Images/U.S. Crime Heat Map Placeholder.jpg"
         alt="U.S. Crime Heat Map"
         class="img-fluid"
+        id="heatmap"
       />
     </div>
+
+    <div class="stats-container mt-4">
+      <div class="card">
+        <h5>Crime Stats</h5>
+        <p>Top Offense: Burglary</p>
+        <p>Total Crimes: 1,234</p>
+      </div>
+      <div class="card">
+        <h5>Most Affected Area</h5>
+        <p>Downtown, St. Louis</p>
+      </div>
+    </div>
+    
 
     <footer class="footer">
       <p>&copy; 2024 Crime Tracker. All Rights Reserved.</p>
