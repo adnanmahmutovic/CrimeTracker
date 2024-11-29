@@ -11,15 +11,41 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-
-    <!-- CrimeTracker Icon -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
-    
+    <style>
+      .search-container {
+        margin: 20px auto;
+        max-width: 600px;
+        text-align: center;
+      }
+      .search-bar {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .search-btn {
+        padding: 10px 15px;
+        background-color: #d08c20;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .search-btn:hover {
+        background-color: #b37a18;
+      }
+      .search-results {
+        margin-top: 20px;
+        color: #333;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
   </head>
-  
   <body>
     <script src="app.js"></script>
 
@@ -53,13 +79,24 @@
         </ul>
       </div>
     </nav>
-    
 
     <!-- Sub-Header Section -->
     <div class="sub-header text-center">
       <h1>Crime Tracker</h1>
       <p>Your trusted companion in understanding crime trends and safety!</p>
       <a href="signup.html" class="btn btn-primary">Sign Up Today!</a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input
+        type="text"
+        id="searchInput"
+        class="search-bar"
+        placeholder="Search for a location..."
+      />
+      <button class="search-btn" onclick="performSearch()">Search</button>
+      <div id="searchResults" class="search-results"></div>
     </div>
 
     <!-- Main Content -->
@@ -84,6 +121,19 @@
           <i class="fab fa-instagram"></i>
         </a>
       </div>
-    </footer>    
+    </footer>
+
+    <script>
+      function performSearch() {
+        const searchInput = document.getElementById("searchInput").value.trim();
+        const searchResults = document.getElementById("searchResults");
+
+        if (searchInput) {
+          searchResults.textContent = `Searching for: ${searchInput}`;
+        } else {
+          searchResults.textContent = "Please enter a location to search.";
+        }
+      }
+    </script>
   </body>
 </html>
