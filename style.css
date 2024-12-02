@@ -1,12 +1,135 @@
-@import "node_modules/ol/ol.css";
+@import 'node_modules/ol/ol.css';
 
-html, body {
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light Gray */
+  color: #2c2c2c; /* Dark Gray text */
   margin: 0;
-  height: 100%;
+  padding: 0;
 }
-#map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
+
+/* Navbar Styling */
+.custom-navbar {
+  background-color: #6a0013;
+  padding: 1rem;
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.custom-navbar .navbar-brand:hover,
+.custom-navbar .nav-link:hover {
+  color: #171717;
+  text-decoration: none;
+}
+
+.custom-navbar .nav-link {
+  margin-left: 1rem;
+}
+
+/* Sub-Header Styling */
+.sub-header {
+  background-color: #f4f4f4;
+  padding: 30px 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+.sub-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.sub-header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.sub-header .btn-primary {
+  background-color: #6a0013;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+}
+
+.sub-header .btn-primary:hover {
+  background-color: #171717;
+}
+
+/* Heatmap Styling */
+#heatmap {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
+  width: 95%;
+}
+
+/* Footer Social Icons Styling */
+.footer {
+  background-color: #6a0013;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.social-icons {
+  display: inline-flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  font-size: 1.8rem;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #270007;
+}
+
+/* Stats Container Styling */
+.stats-container {
+  display: flex;
+  justify-content: center; /* Centers the cards */
+  gap: 20px; /* Adds space between cards */
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  margin: 30px 0; /* Adds spacing above and below the section */
+}
+
+/* Individual Card Styling */
+.stats-container .card {
+  background-color: #ffffff; /* White background for contrast */
+  border: 1px solid #e0e0e0; /* Light border for structure */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  width: 300px; /* Fixed width for uniformity */
+  text-align: center; /* Center-aligns the text */
+}
+
+.stats-container .card h5 {
+  font-size: 1.5rem;
+  color: #6a0013; /* Matches navbar for a consistent theme */
+  margin-bottom: 10px;
+}
+
+.stats-container .card p {
+  font-size: 1rem;
+  color: #2c2c2c; /* Dark gray text */
+  margin: 0;
+}
+
+/* Navbar Styling */
+.custom-navbar .navbar-brand {
+  padding-left: 10px;
+  padding-right: 10;
 }
