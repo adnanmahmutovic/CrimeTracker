@@ -47,7 +47,7 @@
     </style>
   </head>
   <body>
-    <script src="app.js"></script>
+    <script type="module" src="main.js"></script>
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg custom-navbar">
@@ -68,10 +68,19 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="crimeMap.html">Crime Map</a>
+            <a class="nav-link" href="index.html">Crime Map</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="graph.html">Crime Graph</a>
+<<<<<<< HEAD
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+=======
+>>>>>>> main
           </li>
           <li class="nav-item">
             <a class="nav-link" href="signup.html">Sign Up</a>
@@ -99,6 +108,16 @@
       />
       <button class="search-btn" onclick="performSearch()">Search</button>
       <div id="searchResults" class="search-results"></div>
+<<<<<<< HEAD
+      <p id="search-feedback" class="text-muted mt-2">
+        Start typing to search for a location.
+      </p>
+    </div>
+
+    <!-- Main Content -->
+
+    <div id="heatmap"></div>
+=======
       <p id="search-feedback" class="text-muted mt-2">Start typing to search for a location.</p>
     </div>
 
@@ -111,6 +130,7 @@
         id="heatmap"
       />
     </div>
+>>>>>>> main
 
     <div class="stats-container mt-4">
       <div class="card">
@@ -123,7 +143,10 @@
         <p>Downtown, St. Louis</p>
       </div>
     </div>
+<<<<<<< HEAD
+=======
     
+>>>>>>> main
 
     <footer class="footer">
       <p>&copy; 2024 Crime Tracker. All Rights Reserved.</p>
@@ -142,13 +165,22 @@
 
     <script>
       function performSearch() {
+<<<<<<< HEAD
+        const searchInput = document.getElementById('searchInput').value.trim();
+        const searchResults = document.getElementById('searchResults');
+=======
         const searchInput = document.getElementById("searchInput").value.trim();
         const searchResults = document.getElementById("searchResults");
+>>>>>>> main
 
         if (searchInput) {
           searchResults.textContent = `Searching for: ${searchInput}`;
         } else {
+<<<<<<< HEAD
+          searchResults.textContent = 'Please enter a location to search.';
+=======
           searchResults.textContent = "Please enter a location to search.";
+>>>>>>> main
         }
       }
     </script>

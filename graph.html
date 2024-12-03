@@ -75,18 +75,26 @@
     <div class="container mt-4">
       <h1 class="text-center">Crime Data Graphs</h1>
       <p class="text-center">
-            This section will display crime-related data in various graph formats.
-            The graphs will help users analyze crime patterns and trends in different
-            areas over time.
+        This section will display crime-related data in various graph formats.
+        The graphs will help users analyze crime patterns and trends in
+        different areas over time.
       </p>
     </div>
+<<<<<<< HEAD
+
+=======
     
+>>>>>>> main
     <!-- Graph Section (Centered) -->
     <div id="graph" class="container text-center mt-4">
       <!-- Canvas for Chart.js -->
       <canvas id="crimeChart" width="400" height="200"></canvas>
     </div>
+<<<<<<< HEAD
+
+=======
     
+>>>>>>> main
     <!-- Chart.js Script -->
     <script>
       // Get the Canvas element
@@ -95,25 +103,50 @@
       // Data for the Crime Graph (from the dataset)
       const crimeData = {
         labels: [
-        "All Other Offenses", "Drug/Narcotic Offenses", "Simple Assault", "Drive Under the Influence",
-        "Larceny", "Aggravated Assault", "Disorderly Conduct", "Drunkenness", "Liquor Law Violations",
-        "Destruction/Damage/Vandalism of Property", "Burglary", "Weapon Law Violations", "Fraud Offenses",
-        "Stolen Property Offenses", "Motor Vehicle Theft", "Robbery", "Family Offenses, Nonviolent",
-        "Counterfeiting/Forgery", "Vagrancy/Loitering", "Sex Offenses, Non-forcible", "Prostitution Offenses",
-        "Sex Offenses", "Homicide Offenses", "Embezzlement", "Arson", "Gambling Offenses", "Suspicion",
-        "Human Trafficking", "Runaway"
+          'All Other Offenses',
+          'Drug/Narcotic Offenses',
+          'Simple Assault',
+          'Drive Under the Influence',
+          'Larceny',
+          'Aggravated Assault',
+          'Disorderly Conduct',
+          'Drunkenness',
+          'Liquor Law Violations',
+          'Destruction/Damage/Vandalism of Property',
+          'Burglary',
+          'Weapon Law Violations',
+          'Fraud Offenses',
+          'Stolen Property Offenses',
+          'Motor Vehicle Theft',
+          'Robbery',
+          'Family Offenses, Nonviolent',
+          'Counterfeiting/Forgery',
+          'Vagrancy/Loitering',
+          'Sex Offenses, Non-forcible',
+          'Prostitution Offenses',
+          'Sex Offenses',
+          'Homicide Offenses',
+          'Embezzlement',
+          'Arson',
+          'Gambling Offenses',
+          'Suspicion',
+          'Human Trafficking',
+          'Runaway',
         ],
-        datasets: [{
-          label: 'Crime Rate',
-          data: [
-            25639204, 25483199, 8900916, 7865774, 7579634, 3173301, 2764822, 2106309, 1547510, 1542099, 
-            1508608, 1383227, 951566, 753234, 701181, 691888, 670869, 385743, 374802, 346880, 270822, 
-            193896, 114842, 112926, 79419, 41042, 7793, 4347, 0
-          ],
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
-          borderColor: 'rgba(54, 162, 235, 1)',
-          borderWidth: 1
-        }]
+        datasets: [
+          {
+            label: 'Crime Rate',
+            data: [
+              25639204, 25483199, 8900916, 7865774, 7579634, 3173301, 2764822,
+              2106309, 1547510, 1542099, 1508608, 1383227, 951566, 753234,
+              701181, 691888, 670869, 385743, 374802, 346880, 270822, 193896,
+              114842, 112926, 79419, 41042, 7793, 4347, 0,
+            ],
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1,
+          },
+        ],
       };
 
       // Create a new Chart
@@ -121,20 +154,38 @@
         type: 'bar', // Type of chart (can change from 'bar' to 'line' or 'pie' if needed)
         data: crimeData,
         options: {
-          responsive: true,  // Make the chart responsive
+          responsive: true, // Make the chart responsive
           maintainAspectRatio: false, // Allow height to adjust
           scales: {
             y: {
               beginAtZero: true, // Start the y-axis at 0
               ticks: {
                 max: 30000000, // Set a max value for the y-axis to make the chart more compact
-                stepSize: 5000000 // Control the steps between y-axis ticks
-              }
-            }
-          }
-        }
+                stepSize: 5000000, // Control the steps between y-axis ticks
+              },
+            },
+          },
+        },
       });
     </script>
+<<<<<<< HEAD
+    <footer class="footer">
+      <p>&copy; 2024 Crime Tracker. All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
+=======
         <footer class="footer">
           <p>&copy; 2024 Crime Tracker. All Rights Reserved.</p>
           <div class="social-icons">
@@ -151,3 +202,4 @@
         </footer> 
     </body>
   </html>
+>>>>>>> main
