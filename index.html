@@ -72,20 +72,13 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="graph.html">Crime Graph</a>
-<<<<<<< HEAD
           </li>
           <li class="nav-item">
             <a class="nav-link" href="signup.html">Sign Up</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="profile.html">Profile</a>
-=======
->>>>>>> main
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="signup.html">Sign Up</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
         </ul>
       </div>
     </nav>
@@ -108,29 +101,15 @@
       />
       <button class="search-btn" onclick="performSearch()">Search</button>
       <div id="searchResults" class="search-results"></div>
-<<<<<<< HEAD
       <p id="search-feedback" class="text-muted mt-2">
         Start typing to search for a location.
       </p>
     </div>
 
     <!-- Main Content -->
-
-    <div id="heatmap"></div>
-=======
-      <p id="search-feedback" class="text-muted mt-2">Start typing to search for a location.</p>
-    </div>
-
-    <!-- Main Content -->
     <div class="heatamp-container">
-      <img
-        src="Images/U.S. Crime Heat Map Placeholder.jpg"
-        alt="U.S. Crime Heat Map"
-        class="img-fluid"
-        id="heatmap"
-      />
+      <div id="heatmap"></div>
     </div>
->>>>>>> main
 
     <div class="stats-container mt-4">
       <div class="card">
@@ -143,10 +122,6 @@
         <p>Downtown, St. Louis</p>
       </div>
     </div>
-<<<<<<< HEAD
-=======
-    
->>>>>>> main
 
     <footer class="footer">
       <p>&copy; 2024 Crime Tracker. All Rights Reserved.</p>
@@ -165,22 +140,13 @@
 
     <script>
       function performSearch() {
-<<<<<<< HEAD
         const searchInput = document.getElementById('searchInput').value.trim();
         const searchResults = document.getElementById('searchResults');
-=======
-        const searchInput = document.getElementById("searchInput").value.trim();
-        const searchResults = document.getElementById("searchResults");
->>>>>>> main
 
         if (searchInput) {
           searchResults.textContent = `Searching for: ${searchInput}`;
         } else {
-<<<<<<< HEAD
           searchResults.textContent = 'Please enter a location to search.';
-=======
-          searchResults.textContent = "Please enter a location to search.";
->>>>>>> main
         }
       }
     </script>
