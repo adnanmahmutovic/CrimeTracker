@@ -9,6 +9,7 @@ import Feature from 'ol/Feature';
 import Point from 'ol/geom/Point';
 import { defaults as defaultControls } from 'ol/control';
 import GeoJSON from 'ol/format/GeoJSON';
+import Overlay from 'ol/Overlay';
 
 // Initialize the map
 useGeographic();
@@ -31,32 +32,48 @@ const map = new Map({
   ],
   view: view,
 });
-
-// Click event to get coordinates of a click on the map
-map.on('click', function (evt) {
-  const coordinates = toLonLat(evt.coordinate);
-  alert(
-    `Longitude: ${coordinates[0].toFixed(
-      4
-    )}, Latitude: ${coordinates[1].toFixed(4)}`
-  );
+// Create a popup overlay
+const popupContainer = document.getElementById('popup');
+const popupContent = document.getElementById('popup-content');
+const overlay = new Overlay({
+  element: popupContainer,
+  autoPan: true,
+  autoPanAnimation: {
+    duration: 250,
+  },
 });
+map.addOverlay(overlay);
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Heatmap Interactivity
-  const heatmap = document.getElementById('heatmap');
-  heatmap.addEventListener('mouseenter', () => {
-    heatmap.style.filter = 'brightness(0.9)';
-    heatmap.style.cursor = 'pointer';
+
+map.on('click', function (evt) {
+  const coordinate = evt.coordinate;
+  let featureFound = false;
+
+  map.forEachFeatureAtPixel(evt.pixel, function (feature) {
+    const properties = feature.getProperties();
+    if (properties.crime_offense) {
+      featureFound = true;
+      // Populate the popup with crime details
+      popupContent.innerHTML = `
+        <h3>${properties.crime_offense}</h3>
+        <p><strong>ID:</strong> ${properties.rand_point_id}</p>
+        <p><strong>Coordinates:</strong> ${coordinate[1].toFixed(4)}, ${coordinate[0].toFixed(4)}</p>
+      `;
+      overlay.setPosition(coordinate);
+    }
   });
 
-  heatmap.addEventListener('mouseleave', () => {
-    heatmap.style.filter = 'brightness(1)';
-  });
+  // If no feature is clicked, hide the popup
+  if (!featureFound) {
+    overlay.setPosition(undefined);
+  }
 
-  heatmap.addEventListener('click', () => {
-    alert('You clicked on the heatmap! Detailed crime stats coming soon.');
-  });
+  const closer = document.getElementById('popup-closer');
+  closer.onclick = function () {
+    overlay.setPosition(undefined);
+    return false;
+  };
+});  // <-- Closing the map click event handler here
 
   // Dynamic Search Feedback
   const searchInput = document.getElementById('searchInput');
@@ -68,4 +85,3 @@ document.addEventListener('DOMContentLoaded', () => {
       ? `Searching for: ${location}...`
       : 'Start typing to search for a location.';
   });
-});

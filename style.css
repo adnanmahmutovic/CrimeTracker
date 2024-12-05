@@ -135,3 +135,44 @@ body {
   padding-left: 10px;
   padding-right: 10;
 }
+
+.ol-popup {
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid black;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  bottom: 12px;
+  left: -50px;
+  min-width: 200px;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+.ol-popup:after,
+.ol-popup:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.ol-popup:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: white;
+  border-width: 10px;
+  left: 50%;
+  margin-left: -10px;
+}
+
+.ol-popup:before {
+  border-color: rgba(0, 0, 0, 0);
+  border-top-color: black;
+  border-width: 11px;
+  left: 50%;
+  margin-left: -11px;
+}
